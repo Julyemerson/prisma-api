@@ -1,8 +1,8 @@
 FROM node:lts-alpine
 
 RUN apk add --no-cache bash
-
-RUN yarn add global @nestjs/cli
+RUN npm install -g npm@latest
+RUN npm install -g @nestjs/cli
 
 USER node
 
