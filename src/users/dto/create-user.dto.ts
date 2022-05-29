@@ -10,5 +10,5 @@ export class CreateUserDto {
   name: string;
 
   @IsBoolean()
-  admin: boolean;
+  admin?: boolean;
 }

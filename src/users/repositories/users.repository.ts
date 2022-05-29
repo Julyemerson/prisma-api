@@ -6,7 +6,7 @@ import { UpdateUserDto } from '../dto/update-user.dto';
 @Injectable()
 export class UsersRepository {
   constructor(private readonly prisma: PrismaService) {}
-
+  '';
   async create(createUserDto: CreateUserDto) {
     const createdUser = await this.prisma.user.create({
       data: createUserDto,
@@ -37,6 +37,8 @@ export class UsersRepository {
       },
       data: updateUserDto,
     });
+
+    return updatedUser;
   }
 
   async remove(id: number) {
